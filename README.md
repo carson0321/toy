@@ -1,17 +1,60 @@
 # Toy
-* prank.sh: Send message to play a prank on somebody
+
+Some practical tools. Just have fun.
+
+## Scripts
+
+```bash
+.
+├── clone_all_projects.sh
+├── mongodb_checker.sh
+├── others
+│   ├── etc-logrotate.d-mongod
+│   └── etc-systemd-system-mongodb.service
+└── prank.sh
+```
+
+* prank.sh: Send a message to play a prank on somebody
 * mongodb_checker.sh: Check the status of mongoDB
+* clone_all_projects.sh: Clone all gitlab's projects.
+* Directory others:
+  * etc-logrotate.d-mongod: Manage the automatic rotation and compression of mongoDB log file (/etc-logrotate.d/mongod & /var/log/)
+  * etc-systemd-system-mongodb: Run mongoDB as a service using systemd (/etc/systemd/system/mongodb)
 
-# Usage
-* prank.sh:
+## Usages
+
+* prank.sh: `sudo bash -x bingo.sh [name] [msg]`
+* mongodb_checker.sh: `sudo bash -x mongodb_checker.sh` (P.S. Highly recommended to use it with crontab)
+* clone_all_projects.sh: `bash -x clone_all_projects.sh [gitlab url] [gitlab token]`
+
+## License
+
+This software is licensed under the [MIT license](http://en.wikipedia.org/wiki/MIT_License).
 
 ```bash
-sudo ./bingo.sh name msg
+MIT License
+
+Copyright (c) 2018 Carson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
 ```
 
-* mongodb_checker.sh:
-
-```bash
-sudo mongodb_checker.sh
-```
-P.S. Highly recommended for crontab
+© 2018 Carson Wang.
